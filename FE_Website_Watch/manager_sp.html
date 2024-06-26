@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- icons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="assets/css/manager.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+	<title>Admin</title>
+	<!-- JS -->
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="header" id="header">
+        <nav class="nav container">
+            <a href="home.html" class="nav__logo">
+                <i class='bx bxl-medium-old'></i>TS-WATCH
+            </a>
+    
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">New</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="user_product.html" class="nav__link">Products</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+    
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <form action="" id="search-bar" class="search">
+                    <input type="search" placeholder="Type something..." class="search__input">
+                    <a href="#"><i class='bx bx-search' ></i></a>
+                </form>
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag' ></i>
+                </div>
+    
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+                
+                <div class="nav__user" id="info-user">
+                    <a href="manager_tk.html"><i class='bx bx-user'></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<!-- <a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">AdminHub</span>
+		</a> -->
+		<ul class="side-menu top">		
+			<li>
+				<a href="manager_tk.html" class="active">
+					<i class='bx bx-bar-chart-alt'></i>
+					<span class="text">Thống kê</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="#main__product">
+					<i class='bx bxs-watch-alt'></i>
+					<span class="text">Sản phẩm</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_ddh.html">
+					<i class='bx bxs-cart-alt'></i>
+					<span class="text">Đơn đặt hàng</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_dg.html">
+					<i class='bx bxs-pen'></i>
+					<span class="text">Đánh giá</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_nv.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Nhân viên</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_kh.html">
+					<i class='bx bxs-user-detail'></i>
+					<span class="text">Khách hàng</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_hdh-ldh.html">
+					<i class='bx bxs-component'></i>
+					<span class="text">Hãng/Loại đồng hồ</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_km.html">
+					<i class='bx bxs-city'></i>
+					<span class="text">Khuyến mãi</span>
+				</a>
+			</li>
+            <li>
+				<a href="manager_bh.html">
+					<i class='bx bxs-city'></i>
+					<span class="text">Bảo hành</span>
+				</a>
+			</li>
+			<li>	
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Đăng xuất</span>
+				</a>
+			</li>
+		</ul>
+		<!-- <ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Brands</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Categorys</span>
+				</a>
+			</li>
+		</ul> -->
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			
+			<a href="#" class="nav-link"><i class='bx bx-menu' ></i></a>
+			<a href="#" class="btn-download">
+				<i class='bx bxs-cloud-download' ></i>
+				<span class="text">Download PDF</span>
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+            <div id ="main__product">
+                <div class="head-title">
+                    <div class="left">
+                        <h1>Sản Phẩm</h1>
+                            <!-- <ul class="breadcrumb">
+                                <li>
+                                    <a href="#">statistics</a>
+                                </li>
+                                <li><i class='bx bx-chevron-right'	 ></i></li>
+                                <li>
+                                    <a class="active" href="#">Home</a>
+                                </li>
+                            </ul> -->
+                    </div>
+                </div>
+                <div class="dialog" id="confirmDialog_">
+                    <div class="dialog-content">
+                      <h2>Xác nhận xóa</h2>
+                      <p>Bạn có chắc chắn muốn xóa thông tin sản phẩm</p><output id = "id_"></output>
+                      <div class="dialog-buttons">
+                        <button id="confirmBtn">Đồng ý</button>
+                        <button id="cancelBtn">Hủy bỏ</button>
+                      </div>
+                    </div>
+                </div>   
+                <div class="table-data">
+                    <div class="order">
+                        <div class="head">
+                            <h3>Danh sách sản phẩm</h3>
+                                <form action="" id="search-bar" class="search">
+                                <input type="search" placeholder="Type something..." class="search__input">
+                                <a href="#"><i class='bx bx-search' ></i></a>
+                                </form>
+                                <a href="#" onclick="openDetail_ad()"><i class="lni lni-circle-plus"></i></a>
+                        </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên Sản Phẩm</th>
+                                <th>Hình ảnh</th>
+                                <th>Hãng</th>
+                                <th>Loại</th>
+                                <th style="display: none;">Mô tả</th>
+                                <th style="display: none;">Mặt kính</th>
+                                <th style="display: none;">Dây đeo</th>
+                                <th style="display: none;">Bộ máy</th>
+                            
+                                <th>Size</th>
+                                <th>Giá</th>
+                                <th>Số Lượng</th>
+                                <th>Chỉnh Sửa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>1</p></td>
+                                    <td>APPLE-WATCH</td>
+                                    <td><img class="img_product" src="assets/img/new1.png"></td>
+                                    <td><p>Hãng 1</p></t>
+                                    <td><p>Loại 1</p></td>
+
+                                    <td style="display: none;"class="td__address"><p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p></td>
+                                    <td style="display: none;">Kính cường lực</td>
+                                    <td style="display: none;"><p>Da da</p></td>
+                                    <td style="display: none;"><p>Cơ tự động</p></td>
+                                
+                                    <td><p>44mm</p></td>
+                                    <td><p>1000000</p></t>
+                                    <td><p>10</p></td>
+                                    <td class="btn">
+                                        <a class ="btn__chitiet" href="#change" onclick="getDetailInfo()"><i class='bx bx-detail' ></i></a>
+                                        <a class ="btn__xoa"href="#delete"><i class='bx bxs-trash' ></i></a>
+                                    </td>
+                                    <!-- <td><span class="status completed">Completed</span></td> -->
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div aria-label="Page navigation" id="nav__page">
+                <ul class="pagination" id="pagination">
+                    <li class="page-item first disabled"><a href="#First" class="page-link">First</a></li>
+                    <li class="page-item prev disabled"><a href="#Previous" class="page-link">Previous</a></li>
+                    <li class="page-item active"><a href="#1" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#2" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#3" class="page-link">3</a></li>
+                    <li class="page-item next"><a href="#Next" class="page-link">Next</a></li>
+                    <li class="page-item last"><a href="#Last" class="page-link">Last</a></li>
+                </ul>
+            </div>
+            </div>
+        </main>
+        <div class="detail" id="detail">
+            <div class="detail-content">
+                <div class="cutumer__account">
+                    <span class="close_chitiet" onclick="closeDetail()">&times;</span>
+                    <form class="form-input">
+                        <ul id="myList">
+                            <li>
+                                <input  type="text" id="input__productID" name="productID"  class="field-style field-full align-none"  placeholder="ID sản phẩm">
+                            </li>
+                            <li>
+                                <input  type="text" id="input__productName"  name="productName" class="field-style field-full align-none" placeholder="Tên sản phẩm">
+                            </li>
+                            <li style="border: 1px solid black; display: flex; align-items: center; justify-content: start;gap: 30px;height: 50px; padding: 10px;">
+                                <input type="file" id="input__img" name="img" class="field-full align-none"  accept="image/*,.pdf" multiple style="opacity: 1; max-width: 85px;">
+                                <span class="span_fileName" style="margin: 0 0px;">File name:</span>
+                                <img style="height: 40px; width: 40px; object-fit: cover;" class="preView_img" src="">
+                            </li>
+                            <li>
+                                <select type="text" id="input__brand"  class="field-style field-split align-left" name="role_id">
+                                    <option value="0">Hãng đồng hồ</option>
+                                    <option value="Hãng 1">Hãng 1</option>
+                                    <option value="Hãng 2">Hãng 2</option>
+                                </select>
+                                <select type="text" id="input__category"  class="field-style field-split align-right" name="status">
+                                    <option value="0">Loại đồng hồ</option>
+                                    <option value="Loại 1">Loại 1</option>
+                                    <option value="Loại 2">Loại 2</option>
+                                </select> 
+                            </li>
+                            <li>
+                                <textarea id="textarea__desc" name="desc" class="field-style field-full align-none" placeholder="Mô tả"></textarea>
+                            </li>
+                            <li>
+                                <input  type="text" id="input__size"  name="size" class="field-style field-split align-left" placeholder="size">
+                                <input  type="text" id="input__movenment"  name="movenment" class="field-style field-split align-right" placeholder="Loại máy">
+                            </li>
+                            <li>
+                                <input  type="text" id="input__crystal"  name="crystal" class="field-style field-split align-left" placeholder="Tên chất liệu mặt kính">
+                                <input  type="text" id="input__brace"  name="brace" class="field-style field-split align-right" placeholder="Tên chất liệu dây đeo">
+                            </li>
+                            
+                            <li>
+                                <input type="text" id="input__price" name="price" class="field-style field-split align-left" placeholder="Giá">
+                                <input type="text" id="input__sl" name="sl" class="field-style field-split align-right" placeholder="Số lượng">
+                            </li>
+                            
+                            <li>
+                                <input  type="submit" value="Save" />
+                            </li>
+                
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=============== SCROLL UP ===============-->
+	 <a href="#" class="scrollup" id="scroll-up"> 
+        <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+    </a>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+	<script src="assets/js/chart.js"></script>
+	<script src="assets/js/mgr_script.js"></script>
+</body>
+</html>

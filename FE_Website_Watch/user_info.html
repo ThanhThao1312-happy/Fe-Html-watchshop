@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="assets/css/manager.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/progress.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+	<title>User</title>
+	<!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+
+ <!--=============== SCROLL UP ===============-->
+ 
+<header class="header" id="header">
+        <nav class="nav container">
+            <a href="home.html" class="nav__logo">
+                <i class='bx bxl-medium-old'></i>TS-WATCH
+            </a>
+    
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">New</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="user_product.html" class="nav__link">Products</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+    
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <form action="" id="search-bar" class="search">
+                    <input type="search" placeholder="Type something..." class="search__input">
+                    <a href="#"><i class='bx bx-search' ></i></a>
+                </form>
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag' ></i>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+                
+                <div class="nav__user" id="info-user">
+                    <a href="manager_tk.html"><i class='bx bx-user'></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<ul class="side-menu top">		
+			<li class="active">
+				<a href="#main_infoUser">
+					<i class='bx bxs-info-circle'></i>
+					<span class="text">Thông tin tài khoản</span>
+				</a>
+			</li>
+            <li>
+				<a href="user_order.html">
+					<i class='bx bxs-cart-alt'></i>
+					<span class="text">Đơn mua</span>
+				</a>
+			</li>
+            <li>	
+                <a href="#" class="logout">
+                    <i class='bx bxs-log-out-circle' ></i>
+                    <span class="text">Đăng xuất</span>
+                </a>
+            </li>
+		</ul>
+		<!-- <ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Brands</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Categorys</span>
+				</a>
+			</li>
+		</ul> -->
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			
+			<a href="#" class="nav-link"><i class='bx bx-menu' ></i></a>
+			<a href="#" class="btn-download">
+				<i class='bx bxs-cloud-download' ></i>
+				<span class="text">Download PDF</span>
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+        
+		<!-- MAIN -->
+		<main>
+            <!-- <ul class="box-info">
+				<li>
+					<i class='bx bxs-basket'></i>
+					<span class="text">
+						<h3>...</h3>
+						<p>Tổng đơn đặt hàng</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dollar-circle' ></i>
+					<span class="text">
+						<h3>$...</h3>
+						<p>Tổng giá trị đơn hàng</p>
+					</span>
+				</li>
+			</ul> -->
+            <div id = "main_infoUser">
+                <div class="head-title">
+                    <div class="left">
+                    
+                    </div>
+                </div>
+                <div class="form-info">
+                    
+                    <form class="form-input">
+                        <div id="avt-user">
+                            <img src="assets/img/2.jpg">
+                            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                        </div>
+                        <ul id="">
+                            <li>
+                                <label class="form-label">Họ và tên</label>
+                                <input  type="text" id="input_customerName" name="customer_name"  class="field-style field-full align-none"  placeholder="Nhập họ và tên">
+                            </li>
+                            <li>
+                                <label class="form-label">Tên đăng nhập</label>
+                                <input readonly type="text" id="input__userName"  name="username" class="field-style field-full align-none" placeholder="Tên đăng nhập">
+                            </li>
+                            <li>
+                                <label class="form-label">Email</label>
+                                <input readonly type="text" id="input__email"  name = "email" class="field-style field-full align-none" placeholder="Nhập email">
+                            </li>
+                             
+                            <li>
+                                <label class="form-label">Số điện thoại</label>
+                                <input  id="input__phone" type="text" class="field-style field-full align-none" placeholder="Nhập số điện thoại" name="phone">
+                            </li>
+                            <li>
+                                <label class="form-label">Địa chỉ</label>
+                                <input  id="input__address" type="text" class="field-style field-full align-none" placeholder="Nhập địa chỉ" name="address">
+                            </li>
+                            <li>
+                                <input  id="input_birthday" type="date" class="field-style field-split align-left" name="birthday"  placeholder="Ngày sinh">
+
+                                <select type="text" id="input_gender"  class="field-style field-split align-right" name="gender" >
+                                    <option value="0">Giới tính</option>
+                                    <option value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                </select>
+                            </li> 
+                            <li style="margin-top:20px;">  
+                                <input style="float:left" type="submit" value="Cập nhật" />
+                                <a style="float:right" href="#form-change" class="btn__changePass"><i class='bx bxs-key'></i> Thay đổi mật khẩu</a>
+
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="head-title">
+                </div>
+                <div class="form-changePass" id = "form-change">
+                    <form class="form-input">
+                        <ul id="">
+                            <li>
+                                <label class="form-label">Mật khẩu hiện tại</label>
+                                <input  type="text" id="input_oldPass" name="oldpassword"   class="field-style field-full align-none"  placeholder="Nhập mật khẩu hiện tại">
+                            </li>
+                            <li>
+                                <label class="form-label">Mật khẩu mới</label>
+                                <input  type="text" id="input__newPass"  name = "newpassword" class="field-style field-full align-none" placeholder="Nhập mật khẩu mới">
+                            </li>
+                            <li>
+                                <label class="form-label">Xác nhận mật khẩu mới</label>
+                                <input type="text" id="input__email"  name="renewpassword"  class="field-style field-full align-none" placeholder="Nhập lại mật khẩu mới">
+                            </li>
+                            <li style="margin-top:20px;">  
+                                <input  type="submit" value="Xác nhận" />
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </section>
+            <a href="#" class="scrollup" id="scroll-up"> 
+                <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+            </a>
+            
+            <!--=============== SWIPER JS ===============-->
+            <script src="assets/js/swiper-bundle.min.js"></script>
+            
+            <!--=============== MAIN JS ===============-->
+            <script src="assets/js/main.js"></script>
+            <script src="assets/js/chart.js"></script>
+            <script src="assets/js/mgr_script.js"></script>
+            <script src="assets/js/staff.js"></script>   
+            <script src="assets/js/user_script.js"></script>   
+</body>
+</html>

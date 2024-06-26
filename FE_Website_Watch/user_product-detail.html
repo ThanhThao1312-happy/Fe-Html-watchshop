@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== ICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!--=============== SWIPER CSS ===============--> 
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="home.html" class="nav__logo">
+                <i class='bx bxl-medium-old'></i>TS-WATCH
+            </a>
+    
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">New</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="user_product.html" class="nav__link">Product</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+    
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <form action="" id="search-bar" class="search">
+                    <input type="search" placeholder="Type something..." class="search__input">
+                    <a href="#"><i class='bx bx-search' ></i></a>
+                </form>
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag' ></i>
+                </div>
+    
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+                
+                <div class="nav__user" id="info-user">
+                    <a href="manager_tk.html"><i class='bx bx-user'></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--==================== CART ====================-->
+    <div class="cart" id="cart">
+        <i class='bx bx-x cart__close' id="cart-close"></i>
+
+        <h2 class="cart__title-center">My Cart</h2>
+
+        <div class="cart__container">
+        </div>
+
+        <div class="cart__prices">
+            <span class="cart__prices-item">0 items</span>
+            <span class="cart__prices-total">$0</span>
+        </div>
+        <a href="user_thanhtoan.html" class="button home__button buy">BUY NOW</a>
+    </div>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="section main-wrapper">
+            <div class="container">
+                <div class="product-div">
+                    <div class="product-div-left">
+                        <div class="img-container">
+                            <img src="assets/img/4.jpg" class="product-img">
+                            <img src="assets/img/4.jpg" alt="watch-imge" id="imgZoom">
+                        </div>
+                    </div>
+                    <div class="product-div-right">
+                        <span class="product-name">Spirit rose</span>
+                        <span class="product-price noneDiscount">1.500.000 VND</span>
+                        <div class="div_discount">
+                            <span class="product-price discount">950.000 VND</span>
+                            <span class="precentDiscountDl">30%</span>
+                        </div>  
+                        <div class="id-status">
+                            <div>
+                                <P>Mã sản phẩm: </P>
+                                <p class="font-bold">SP01</p>
+                            </div>
+                            <div>
+                                <p>Tình trạng: </p>
+                                <p class="font-bold status-product">Còn hàng</p>
+                            </div>
+                        </div>
+                        <div class="size">
+                            <p>Size:</p>
+                            <div class="psize">
+                                <p>40mm</p></div>
+                        </div>
+                        <div class="quantity">
+                            <p>Quantity:</p>
+                            <input type="number" min="1" max="100" value="1" class="quantity_value">
+                        </div>
+                        <div class="btn-groups">
+                            <a href="#">
+                                <button type="button" class="add-cart-btn">
+                                <i class="bx bxs-cart-add"></i>
+                                Add to cart
+                                </button>
+                        </a>
+                            <a href="user_thanhtoan.html">
+                                <button type="button" class="buy-now-btn">
+                                    <i class="bx bxs-wallet"></i>
+                                    Buy now 
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section main-desc">
+            <h3 class="section__title">
+                MÔ TẢ SẢN PHẨM
+            </h3>
+            <div class="container">
+                <div class="product-desc">Thiết kế sang trọng, màu sắc trendy. Đặc biệt khả năng chống nước cực kỳ tốt hứa hẹn sẽ mang lại cho bạn một trải nghiệm trên cả mong đợi.Thiết kế sang trọng, màu sắc trendy. Đặc biệt khả năng chống nước cực kỳ tốt hứa hẹn sẽ mang lại cho bạn một trải nghiệm trên cả mong đợi</div>
+
+            </div>
+        </section>
+        <section class="section main-review">
+            <h3 class="section__title">
+                ĐÁNH GIÁ SẢN PHẨM
+            </h3>
+            <div class="container">
+                <div class="review-div" onclick="showDlReview()">
+                    <div class="countReviews">
+                        <h4 style="margin-right: 5px;">Review </h4>
+                        <h4 class="totalReviews">[0]</h4>
+                    </div>
+                    <div class="product-rating total">
+                        <h4 class="average-rating">0</h4>
+                        <!-- <div class="average-starts">
+                        </div> -->
+                        <span><i type="solid" class ="bx bxs-star"></i></span>
+                        <!-- <span><i type="solid" class ="bx bxs-star"></i></span>
+                        <span><i type="solid" class ="bx bxs-star"></i></span>
+                        <span><i type="solid" class ="bx bxs-star"></i></span>
+                        <span><i type="solid" class ="bx bxs-star"></i></span> -->
+                        <i class='bx bx-chevron-down down iconReview'></i>
+                    </div>
+                </div>
+
+                <div class="review-div dl">
+                    <div class="user-review">
+                        <h4>[idReview]</h4>
+                        <input type="hidden" class="starts" value="1">
+                        <div class="user-start">
+                        </div>
+                        <p class="content-review">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        <p class="dateReview">01/01/2002</p>
+                    </div>
+                    <div class="user-review">
+                        <h4>[idReview]</h4>
+                        <input type="hidden" class="starts" value="3">
+                        <div class="user-start">
+                        </div>
+                        <p class="content-review">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        <p class="dateReview">01/01/2002</p>
+                    </div>
+                    <div class="user-review">
+                        <h4>[idReview]</h4>
+                        <input type="hidden" class="starts" value="3">
+                        <div class="user-start">
+                        </div>
+                        <p class="content-review">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                        <p class="dateReview">01/01/2002</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!--==================== FEATURED ====================-->
+        <section class="featured section container" id="featured">
+            <h2 class="section__title">
+                SẢN PHẨM CÙNG THƯƠNG HIỆU
+            </h2>
+            <div class="featured__container grid">
+                <c:forEach var = "item" items = "${watchofbrand}">
+                    <article class="featured__card">
+                        <!-- <span class="featured__tag">Sale</span> -->
+                        <img src="assets/img/featured1.png" alt="" class="featured__img">
+                        <div class="featured__data">
+                            <h3 class="featured__title">${item.watch_name}</h3>
+                            <span class="featured__price">${item.price}</span>
+                        </div>
+                        <button class="button featured__button btn_buynow">Thêm vào giỏ hàng</button>
+                    </article>
+                </c:forEach>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section" style="margin-top: 20px;">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Our information</h3>
+
+                <ul class="footer__list">
+                    <li>1234 - Peru</li>
+                    <li>La Libertad 43210</li>
+                    <li>123-456-789</li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">About Us</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Support Center</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Customer Support</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Copy Right</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Product</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Road bikes</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Mountain bikes</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Electric</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Accesories</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social</h3>
+
+                <ul class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer__copy">&#169; Bedimcode. All rigths reserved</span>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up"> 
+        <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+    </a>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/user_script.js"></script>
+</body>
+</html>

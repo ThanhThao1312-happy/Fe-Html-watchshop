@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
+	<!-- My CSS -->
+	<link rel="stylesheet" href="assets/css/manager.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/progress.css">
+	<title>Admin</title>
+	<!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="header" id="header">
+        <nav class="nav container">
+            <a href="home.html" class="nav__logo">
+                <i class='bx bxl-medium-old'></i>TS-WATCH
+            </a>
+    
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">New</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="user_product.html" class="nav__link">Products</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+    
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <form action="" id="search-bar" class="search">
+                    <input type="search" placeholder="Type something..." class="search__input">
+                    <a href="#"><i class='bx bx-search' ></i></a>
+                </form>
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag' ></i>
+                </div>
+    
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+                
+                <div class="nav__user" id="info-user">
+                    <a href="manager_tk.html"><i class='bx bx-user'></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<ul class="side-menu top">		
+			<li>
+				<a href="manager_tk.html" class="active">
+					<i class='bx bx-bar-chart-alt'></i>
+					<span class="text">Thống kê</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_sp.html">
+					<i class='bx bxs-watch-alt'></i>
+					<span class="text">Sản phẩm</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="#main__ddh">
+					<i class='bx bxs-cart-alt'></i>
+					<span class="text">Đơn đặt hàng</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_dg.html">
+					<i class='bx bxs-pen'></i>
+					<span class="text">Đánh giá</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_nv.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Nhân viên</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_kh.html">
+					<i class='bx bxs-user-detail'></i>
+					<span class="text">Khách hàng</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_hdh-ldh.html">
+					<i class='bx bxs-component'></i>
+					<span class="text">Hãng/Loại đồng hồ</span>
+				</a>
+			</li>
+			<li>
+				<a href="manager_km.html">
+					<i class='bx bxs-city'></i>
+					<span class="text">Khuyến mãi</span>
+				</a>
+			</li>
+            <li>
+				<a href="manager_bh.html">
+					<i class='bx bxs-city'></i>
+					<span class="text">Bảo hành</span>
+				</a>
+			</li>
+
+			<li>	
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Đăng xuất</span>
+				</a>
+			</li>
+		</ul>
+		<!-- <ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Brands</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Categorys</span>
+				</a>
+			</li>
+		</ul> -->
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			
+			<a href="#" class="nav-link"><i class='bx bx-menu' ></i></a>
+			<a href="#" class="btn-download">
+				<i class='bx bxs-cloud-download' ></i>
+				<span class="text">Download PDF</span>
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+<div id="main__ddh">
+<div class="head-title">
+    <div class="left">
+        <h1>Đơn đặt hàng</h1>
+            <!-- <ul class="breadcrumb">
+                <li>
+                    <a href="#">statistics</a>
+                </li>
+                <li><i class='bx bx-chevron-right'	 ></i></li>
+                <li>
+                    <a class="active" href="#">Home</a>
+                </li>
+            </ul> -->
+    </div>
+</div>
+<div class="Loc__DDH">
+    <div class="head">
+        <h3>
+            Lọc nhanh danh sách đơn hàng
+        </h3>
+    </div>
+    <div class="btn__trangthai">
+        <a href="#" class="btn__LocAll">Tất cả</a>
+        <a href="#" class="btn__ChoXN">Chờ xác nhận</a>
+        <a href="#" class="btn__DaXN">Đã xác nhận</a>
+        <a href="#" class ="btn__VanChuyen">Vận chuyển</a>
+        <a href="#" class ="btn__DaGiao">Đã giao</a>
+        <a href="#" class ="btn__DaHuy">Đã hủy</a>
+    </div>
+</div>
+<div class="dialog" id="confirmDialog_xn">
+    <div class="dialog-content">
+        <h2>Xác nhận đơn hàng</h2>
+        <p>Bạn có chắc chắn muốn xác nhận đơn hàng</p>
+        <form id = "submit-status">
+        <input readonly class="input_idDDH" id="id_" name = "order_id_xn" value =""></input>						
+        <input type = "hidden" name = "order_status_xn" value = "2">
+        </form>
+        <div class="dialog-buttons">
+            <button id="confirmBtn">Đồng ý</button>
+            <button id="cancelBtn">Hủy bỏ</button>
+        </div>
+    </div>
+</div>
+<div class="dialog" id="confirmDialog_huy">
+    <div class="dialog-content">
+        <h2>Hủy đơn hàng</h2>
+        <p>Bạn có chắc chắn muốn hủy đơn hàng</p>
+        <form id = "submit-status">
+            <input readonly id="id_1" class="input_idDDH" name = "order_id_huy" value =""></input>						
+            <input type = "hidden" name = "order_status_huy" value="5">
+        </form>
+        <div class="dialog-buttons">
+            <button id="confirmBtn1" >Đồng ý</button>
+            <button id="cancelBtn1">Hủy bỏ</button>
+        </div>
+    </div>
+</div>                         
+<div>
+    <div class="table-data" id="ddh-data">
+        <div class="order">
+            <div class="head">
+                <h3>Danh sách đơn hàng</h3>
+                <form id="search-barByDate"action="">
+									<!-- Lưu kiểu tìm kiếm (Sort theo gì?) -->
+					<input type="text" hidden name="statusOrderSearch" value="3">
+						<div class="div__inputs" >
+							<div>
+								<input class="form-control"id="datepickerfrom_start" name="startDate" type="date">
+							</div>
+                            <span>-</span>
+							<div>
+								<input class="form-control" id="datepickerfrom_end"name="endDate" type="date">
+							</div>
+
+								<button class="btn btn-success" type="submit"style="display: flex; justify-content: center; align-items: center; padding: 10px;">
+                                    <i class='bx bx-search' ></i>
+								</button>
+						</div>
+				</form>
+            </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Người nhận</th>
+                    <th>Thời gian</th>
+                    <th>Địa chỉ</th>
+                    <th>SĐT</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                    <th>UserID</th>
+                    <th>Chi tiết</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                        <td><p>10</p></td>   
+                        <td><p>KH1</p></td>
+                        <!-- <td><time datetime="....-..-.."></time></td> -->
+                        <td><p>yyyy-mm-dd</p></td>
+                        <td class="td__address"><p>339 phước long thành phố thủ đức</p></td>
+                        <td><p>0845002405</p></td>
+                        <td><p>10000000</p></t>
+                        <td class="tt">
+                            <input class ="ttddh" style="display:none;" value="1">   
+                            <div class="btns">
+                                <a class ="btn__DaXN" id ="toggle-green" href="#xacnhan"><i class='bx bx-check' style="border-radius: 20px; padding: 4px;"></i></a>
+                                <a class ="btn__DaHuy" id ="toggle-red" href="#huy"><i class='bx bx-x' style="border-radius: 20px; padding: 4px;"></i></a>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td class="btn">
+                            
+                            <a class ="btn__ttdh"href="#ttdh" onclick="getIdDDH_progress(this)"><i class="lni lni-delivery"></i></a>
+                        </td>
+                        <!-- <td><span class="status completed">Completed</span></td> -->
+                    </tr>
+                    <tr>
+                        <td><p>5</p></td>   
+                        <td><p>KH1</p></td>
+                        <!-- <td><time datetime="....-..-.."></time></td> -->
+                        <td><p>yyyy-mm-dd</p></td>
+                        <td>339 phước long b</td>
+                        <td>0845002405</td>
+                        <td><p>10000000</p></t>
+                        <td class="tt">
+                            <input class ="ttddh" style="display:none;" value="2">
+                            <div class="btns">
+                                <a class ="btn__DaXN" id ="toggle-green" href="#xacnhan"><i class='bx bx-check' style="border-radius: 20px; padding: 4px;"></i></a>
+                                <a class ="btn__DaHuy" id ="toggle-red" href="#huy"><i class='bx bx-x' style="border-radius: 20px; padding: 4px;"></i></a>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td class="btn">
+                            
+                            <a class ="btn__ttdh"href="#ttdh" onclick="getIdDDH_progress(this)"><i class="lni lni-delivery"></i></a>
+                        </td>
+                        <!-- <td><span class="status completed">Completed</span></td> -->
+                    </tr>
+                    <tr>
+                        <td><p>515</p></td>   
+                        <td><p>KH1</p></td>
+                        <!-- <td><time datetime="....-..-.."></time></td> -->
+                        <td><p>yyyy-mm-dd</p></td>
+                        <td>339 phước long b</td>
+                        <td>0845002405</td>
+                        <td><p>10000000</p></t>
+                        <td class="tt">
+                            <input class ="ttddh" style="display:none;" value="3">
+                            <div class="btns">
+                                <a class ="btn__DaXN" id ="toggle-green" href="#xacnhan"><i class='bx bx-check' style="border-radius: 20px; padding: 4px;"></i></a>
+                                <a class ="btn__DaHuy" id ="toggle-red" href="#huy"><i class='bx bx-x' style="border-radius: 20px; padding: 4px;"></i></a>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td class="btn">
+                            
+                            <a class ="btn__ttdh"href="#ttdh" onclick="getIdDDH_progress(this)"><i class="lni lni-delivery"></i></a>
+                        </td>
+                        <!-- <td><span class="status completed">Completed</span></td> -->
+                    </tr>
+                    <tr>
+                        <td><p>515</p></td>   
+                        <td><p>KH1</p></td>
+                        <!-- <td><time datetime="....-..-.."></time></td> -->
+                        <td><p>yyyy-mm-dd</p></td>
+                        <td>339 phước long b</td>
+                        <td>0845002405</td>
+                        <td><p>10000000</p></t>
+                        <td class="tt">
+                            <input class ="ttddh" style="display:none;" value="4">
+                            <div class="btns">
+                                <a class ="btn__DaXN" id ="toggle-green" href="#xacnhan"><i class='bx bx-check' style="border-radius: 20px; padding: 4px;"></i></a>
+                                <a class ="btn__DaHuy" id ="toggle-red" href="#huy"><i class='bx bx-x' style="border-radius: 20px; padding: 4px;"></i></a>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td class="btn">
+                            
+                            <a class ="btn__ttdh"href="#ttdh" onclick="getIdDDH_progress(this)"><i class="lni lni-delivery"></i></a>
+                        </td>
+                        <!-- <td><span class="status completed">Completed</span></td> -->
+                    </tr>
+                    <tr>
+                        <td><p>515</p></td>   
+                        <td><p>KH1</p></td>
+                        <!-- <td><time datetime="....-..-.."></time></td> -->
+                        <td><p>yyyy-mm-dd</p></td>
+                        <td>339 phước long b</td>
+                        <td>0845002405</td>
+                        <td><p>10000000</p></t>
+                        <td class="tt">
+                            <input class ="ttddh" style="display:none;" value="5">
+                            <div class="btns"> 
+                                <a class ="btn__DaXN" id ="toggle-green" href="#xacnhan"><i class='bx bx-check' style="border-radius: 20px; padding: 4px;"></i></a>
+                                <a class ="btn__DaHuy" id ="toggle-red" href="#huy"><i class='bx bx-x' style="border-radius: 20px; padding: 4px;"></i></a>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td class="btn">
+                            
+                            <a class ="btn__ttdh"href="#ttdh" onclick="getIdDDH_progress(this)"><i class="lni lni-delivery"></i></a>
+                        </td>
+                        <!-- <td><span class="status completed">Completed</span></td> -->
+                    </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+<!-- <main class="main__detail"> -->
+
+<!-- </main> -->
+</div>
+</div>
+</main>
+<div class="detail" id="detail-ttdh">
+    <div class="detail-content" >
+        <div class="table-data">
+            <div class="order">
+                <span class="close_chitiet" onclick="closeProgress()">&times;</span>
+                <div class="head">
+                    <h3>Mã đơn hàng:</h3>
+                    <h3 id="id_ddh_progress"></h3>
+                    <h3 id="dateNow"></h3>
+                </div>
+        <div class="progress-order">
+            <ul id ="step">
+                <li>
+                    <i class="icon lni lni-hand"></i>
+                    <div class="active progress one">
+                        <p>1</p>
+                        <i class="lni lni-checkmark"></i>
+                    </div>
+                    <p class="text">Chờ xác nhận</p>
+                </li>
+                <li class="li">
+                    <i class="icon lni lni-thumbs-up"></i>
+                    <div class="progress two">
+                        <p>2</p>
+                        <i class=" lni lni-checkmark"></i>
+                    </div>
+                    <p class="text">Xác nhận</p>
+                </li>
+                <li class="li">
+                    <i class="icon lni lni-bi-cycle"></i>
+                    <div class="progress three">
+                        <p>3</p>
+                        <i class="lni lni-checkmark"></i>
+                    </div>
+                    <p class="text">Vận chuyển</p>
+                </li>
+                <li class="li">
+                    <i class="icon lni lni-package"></i>
+                    <div class="progress four">
+                        <p>4</p>
+                        <i class="lni lni-checkmark"></i>
+                </div>
+                    <p class="text">Đã giao</p>
+                </li>
+                <li class="li_five">
+                    <i class="icon lni lni-cross-circle"></i>
+                    <div class="progress five">                 
+                        <p>5</p>
+                        <i class="lni lni-checkmark"></i>
+                    </div>
+                    <p class="text">Đã hủy</p>
+                </li>
+            </ul>
+        </div>
+        <div class = "listOrder">
+            <div class="OrderOfList">
+                <div class="oderDetail" >
+                    <div class="productOfOder">
+                        <img src="assets/img/5.png">
+                        <div>
+                            <p class="nameProduct">Apple Watch 1</p>
+                            <p style="font-size: 13px;">Size: 44mm</p>
+                            <p  style="font-size: 13px;">SL: 01</p>
+                        </div>
+                        <p>6.000.000</p>
+                    </div>
+                </div>
+                
+                <div class="oderDetail" >
+                    <div class="productOfOder">
+                        <img src="assets/img/5.png">
+                        <div>
+                            <p class="nameProduct">Apple Watch 1</p>
+                            <p style="font-size: 13px;">Size: 44mm</p>
+                            <p  style="font-size: 13px;">SL: 01</p>
+                        </div>
+                        <p>6.000.000</p>
+                    </div>
+                </div>
+                
+                    <p style="text-align: right; color: brown; font-weight: bold; margin-top: 5px; width: 100%;">Thành tiền: 6.000.000</p>
+                </div>
+        </div>
+        <div class="div_nameStaff" style="display: flex; gap: 7px">
+            <p>Nhân viên giao hàng:</p>
+            <p class="nameStaff"></p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+    </section>
+    <!--=============== SCROLL UP ===============-->
+	 <a href="#" class="scrollup" id="scroll-up"> 
+        <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+    </a>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+	<script src="assets/js/chart.js"></script>
+	<script src="assets/js/mgr_script.js"></script>
+    
+</body>
+</html>

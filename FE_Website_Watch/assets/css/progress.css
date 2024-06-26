@@ -1,0 +1,91 @@
+:root{
+    --body-color-mgr: #fde6b3;
+}
+
+#step li.huy{
+    display: none;
+}
+.info-oder{
+    background-color: white ;
+    border-radius: 10px;
+    padding: 10px;
+}
+/* .progress-order{
+    width: fit-content;
+    justify-content: center;
+} */
+.detail-content{
+    align-items: center;
+    background-color:var(--body-color-mgr);
+}
+#step{
+    display: flex;
+    margin-top:20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    width: 100%;
+}
+#step li{
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    color: black;
+}
+#step li .icon{
+    font-size: 25px;
+    margin: 0 50px;
+
+}
+#step li .text{
+    font-size: 14px;
+    font-weight: 600;
+}
+#step li .progress{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: gray;
+    display: grid;
+    place-items: center;
+    color: white;
+    margin: 14px 0;
+    position: relative;
+    place-content: center;
+    cursor: pointer;
+}
+.progress::after{
+    content: " ";
+    position: absolute;
+    height: 7px;
+    width: 95px;
+    background-color: gray;
+    right: 30px;
+}
+.one::after{
+    height: 0;
+    width: 0;
+}
+#step li .progress .lni{
+    display: none;
+}
+#step li .progress p{
+    font-size: 14px;
+}
+#step li .active{
+    background-color: rgb(235, 92, 92);
+    transition:0.4s;
+}
+#step li .active::after{
+    background-color: rgb(235, 92, 92);
+    transition: 0.4s;
+} 
+#step li .active p{
+    display: none;
+
+}
+#step li .active .lni{
+    display: flex;
+    font-size: 15px;
+}

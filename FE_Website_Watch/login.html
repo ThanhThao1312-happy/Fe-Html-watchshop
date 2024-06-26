@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+ 
+  <title>Login</title>
+  <link rel="stylesheet" href="assets/css/login-new.css">
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container register-container">
+          <form action="#" id ="register-form">
+            <h1>Đăng Kí</h1>
+            <input id="input__userName" type="text" placeholder="Tên đăng nhập" oninput="validateUsername()">
+            <span class="txt_error"></span>
+            <input  id="input__pass" type="password" placeholder="Mật khẩu" oninput="validatePass()">
+            <span class="txt_error"></span>
+            <input  id="input__rePass" type="password" placeholder="Xác nhận mật khẩu" oninput="validateRePass()">
+            <span class="txt_error"></span>
+            <input type="text" placeholder="Số điện thoại">
+            <input type="email" placeholder="Email">
+            <a class="button" id="btn__signUp" style="margin:0 0;" href="OTP.html" >Đăng kí</a>
+          </form >
+      </div>
+      <div class="form-container login-container" id ="login-container">
+        <div style="margin: 10px 10px 50px 15px;"><a href="home.html" style="font-size: 30px;"><i class='bx bx-home-smile'></i></a></div>
+        <form action="#" style="justify-content: start;">
+          <h1>Đăng Nhập</h1>
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Password">
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" name="rememberMe" id="checkbox">
+              <label>Ghi nhớ</label>
+            </div>
+            <div>
+              <a href="forget_pass.html">Quên mật khẩu?</a>
+            </div>
+          </div>
+          <a class="button" href="home.html">Đăng nhập</a>
+        </form>
+      </div>
+      <div class="overlay-container" >
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title">Chào bạn,</h1>
+            <p>Nếu bạn đã có tài khoản, vui lòng đăng nhập tại đây</p>
+            <a class="ghost button" id="login">Đăng nhập
+              <i class="lni lni-arrow-left login"></i>
+            </a>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h2 class="title">Trải nghiệm mua sắm cùng</h2>
+            <h1 class="logo" style="font-style:oblique;"><i class='bx bxl-medium-old' ></i> ST WATCH</h1>
+            <p>Nếu bạn chưa có tài khoản, bạn có thể đăng ki tại đây.</p>
+            <a class="ghost button" id="register">Đăng kí
+              <i class="lni lni-arrow-right register"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="assets/js/login.js"></script>
+      
+  </body>
+ 
+</html>

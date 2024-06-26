@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+	<!-- My CSS -->
+	<link rel="stylesheet" href="assets/css/manager.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+	<title>Admin</title>
+	<!-- JS -->
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+<header class="header" id="header">
+        <nav class="nav container">
+            <a href="home.html" class="nav__logo">
+                <i class='bx bxl-medium-old'></i>TS-WATCH
+            </a>
+    
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">New</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="user_product.html" class="nav__link">Products</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+    
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <form action="" id="search-bar" class="search">
+                    <input type="search" placeholder="Type something..." class="search__input">
+                    <a href="#"><i class='bx bx-search' ></i></a>
+                </form>
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag' ></i>
+                </div>
+    
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+                
+                <div class="nav__user" id="info-user">
+                    <a href="manager_tk.html"><i class='bx bx-user'></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- SIDEBAR -->
+<section id="sidebar">
+    <!-- <a href="#" class="brand">
+        <i class='bx bxs-smile'></i>
+        <span class="text">AdminHub</span>
+    </a> -->
+    <ul class="side-menu top">		
+        <li >
+            <a href="manager_tk.html" class="active">
+                <i class='bx bx-bar-chart-alt'></i>
+                <span class="text">Thống kê</span>
+            </a>
+        </li>
+        <li>
+            <a href="manager_sp.html">
+                <i class='bx bxs-watch-alt'></i>
+                <span class="text">Sản phẩm</span>
+            </a>
+        </li>
+        <li>
+            <a href="manager_sp.html">
+                <i class='bx bxs-cart-alt'></i>
+                <span class="text">Đơn đặt hàng</span>
+            </a>
+        </li>
+        <li>
+            <a href="manager_dg.html">
+                <i class='bx bxs-pen'></i>
+                <span class="text">Đánh giá</span>
+            </a>
+        </li>
+        <li>
+            <a href="manager_nv.html">
+                <i class='bx bxs-group' ></i>
+                <span class="text">Nhân viên</span>
+            </a>
+        </li>
+        <li>
+            <a href="manager_kh.html">
+                <i class='bx bxs-user-detail'></i>
+                <span class="text">Khách hàng</span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="manager_hdh-ldh.html">
+                <i class='bx bxs-component'></i>
+                <span class="text">Hãng/Loại đồng hồ</span>
+            </a>
+        </li>
+        <li>
+            <a href="manager_km.html">
+                <i class='bx bxs-city'></i>
+                <span class="text">Khuyến mãi</span>
+            </a>
+        </li>
+        <li>
+            <a href="manager_bh.html">
+                <i class='bx bxs-city'></i>
+                <span class="text">Bảo hành</span>
+            </a>
+        </li>
+
+        <li>	
+            <a href="#" class="logout">
+                <i class='bx bxs-log-out-circle' ></i>
+                <span class="text">Đăng xuất</span>
+            </a>
+        </li>
+    </ul>
+    <!-- <ul class="side-menu">
+        <li>
+            <a href="#">
+                <i class='bx bxs-cog' ></i>
+                <span class="text">Brands</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="logout">
+                <i class='bx bxs-log-out-circle' ></i>
+                <span class="text">Categorys</span>
+            </a>
+        </li>
+    </ul> -->
+</section>
+<section id="content">
+    <!-- NAVBAR -->
+    <nav>
+        
+        <a href="#" class="nav-link"><i class='bx bx-menu' ></i></a>
+        <a href="#" class="btn-download">
+            <i class='bx bxs-cloud-download' ></i>
+            <span class="text">Download PDF</span>
+        </a>
+    </nav>
+    <!-- NAVBAR -->
+
+    <!-- MAIN -->
+    <main>
+        <div id = main__hdh>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Hãng đồng hồ</h1>
+                        <!-- <ul class="breadcrumb">
+                            <li>
+                                <a href="#">statistics</a>
+                            </li>
+                            <li><i class='bx bx-chevron-right'	 ></i></li>
+                            <li>
+                                <a class="active" href="#">Home</a>
+                            </li>
+                        </ul> -->
+                </div>
+            </div>
+            <div class="table-data">
+                <div class="order">
+                    <div class="head">
+                        <h3>Danh sách hãng đồng hồ</h3>
+                        <form action="" id="search-bar" class="search">
+                            <input type="search" placeholder="Type something..." class="search__input">
+                            <a href="#"><i class='bx bx-search' ></i></a>
+                            </form>
+                        <a href="#"><i class="lni lni-circle-plus" onclick="openDetail_ad()"></i></a>
+                    </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên hãng</th>
+                            <th>Chỉnh Sửa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>1</p></td>
+                                <td>APPLE-WATCH</td>
+                                <td class="btn">
+                                    <!-- <a class ="btn__sua" href="#change" onclick="openDetail_ad()"><i class='bx bx-edit-alt'></i></a> -->
+                                    <a class ="btn__chitiet" href="#detail" onclick="getDetailInfo()"><i class='bx bx-detail' ></i></a>
+                                    <a class ="btn__xoa"href="#delete"><i class='bx bxs-trash' ></i></a>
+                                </td>
+                                <!-- <td><span class="status completed">Completed</span></td> -->
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+        <div style="margin-top: 20px; margin-bottom: 50px;" id = main__ldh>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Loại đồng hồ</h1>
+                        <!-- <ul class="breadcrumb">
+                            <li>
+                                <a href="#">statistics</a>
+                            </li>
+                            <li><i class='bx bx-chevron-right'	 ></i></li>
+                            <li>
+                                <a class="active" href="#">Home</a>
+                            </li>
+                        </ul> -->
+                </div>
+            </div>
+            <div class="table-data">
+                <div class="order">
+                    <div class="head">
+                        <h3>Danh sách loại đồng hồ</h3>
+                        <form action="" id="search-bar" class="search">
+                            <input type="search" placeholder="Type something..." class="search__input">
+                            <a href="#"><i class='bx bx-search' ></i></a>
+                        </form>
+                        <a href="#"><i class="lni lni-circle-plus" onclick="openDetail_ad()"></i></a>
+                    </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên loại</th>
+                            <th>Chỉnh Sửa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>1</p></td>
+                                <td>SMART WATCH</td>
+                                <td class="btn">
+                                    <!-- <a class ="btn__sua" href="#change"><i class='bx bx-edit-alt'></i></a> -->
+                                    <a class ="btn__chitiet" href="#detail" onclick="getDetailInfo()"><i class='bx bx-detail' ></i></a>
+                                    <a class ="btn__xoa"href="#delete"><i class='bx bxs-trash' ></i></a>
+                                </td>
+                                <!-- <td><span class="status completed">Completed</span></td> -->
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>  
+    </main>
+    <div class="detail" id="detail">
+        <div class="detail-content">
+            <div class="cutumer__account">
+                <span class="close_chitiet" onclick="closeDetail()">&times;</span>
+                <form class="form-input">
+                    <ul id="myList">
+                        <li>
+                            <input readonly type="text" id="input__brandID" name="bardID"  class="field-style field-full align-none"  placeholder="ID">
+                        </li>
+                        <li>
+                            <input type="text" id="input__brandName"  name="brandName" class="field-style field-full align-none" placeholder="Tên Hãng/Loại">
+                        </li>
+                        <li>
+                            <input  type="submit" value="Save" />
+                        </li>
+            
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- CONTENT -->
+	
+	 <!--=============== SCROLL UP ===============-->
+	 <a href="#" class="scrollup" id="scroll-up"> 
+        <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+    </a>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+	<script src="assets/js/chart.js"></script>
+	<script src="assets/js/mgr_script.js"></script>
+</body>
+</html>

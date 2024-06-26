@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+ 
+  <title>Login</title>
+  <link rel="stylesheet" href="assets/css/login-new.css">
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container register-container">
+          <form style ="display: none;"action="#">
+            <h1>Đăng Kí</h1>
+            <input id="input__userName" type="text" placeholder="Tên đăng nhập" oninput="validateUsername()">
+            <span class="txt_error"></span>
+            <input  id="input__pass" type="password" placeholder="Mật khẩu" oninput="validatePass()">
+            <span class="txt_error"></span>
+            <input  id="input__rePass" type="password" placeholder="Xác nhận mật khẩu" oninput="validateRePass()">
+            <span class="txt_error"></span>
+            <input type="text" placeholder="Số điện thoại">
+            <input type="email" placeholder="Email">
+            <a class="button" id="btn__signUp" style="margin:0 0;"  href="#form__OTP">Đăng kí</a>
+          </form >
+          <form id="form__OTP">
+            <h1>Xác nhận email</h1>
+            <small>Mã OTP đã được gửi đến mail bạn đã đăng kí</small>
+            <input type="text" id = "input__OTP" placeholder="Nhập OTP">
+            <button class="button" type="submit">Xác nhận</button>
+          </form>
+        </div>
+      <div class="overlay-container" >
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title">Chào bạn,</h1>
+            <p>Nếu bạn đã có tài khoản, vui lòng đăng nhập tại đây</p>
+            <a class="ghost button" id="login">Đăng nhập
+              <i class="lni lni-arrow-left login"></i>
+            </a>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h2 class="title">Trải nghiệm mua sắm cùng</h2>
+            <h1 class="logo" style="font-style:oblique;"><i class='bx bxl-medium-old' ></i> ST WATCH</h1>
+            <p>Nếu bạn chưa có tài khoản, bạn có thể đăng ki tại đây.</p>
+            <a class="ghost button" id="register">Đăng kí
+              <i class="lni lni-arrow-right register"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script>
+        // ------LOGIN--------
+const registerButton = document.getElementById("register");
+const loginButton = document.getElementById("login");
+const container = document.getElementById("container");
+
+  container.classList.add("right-panel-active");
+
+loginButton.addEventListener("click", () => {
+  container.classList.remove("right-panel-active");
+});
+      </script>
+  </body>
+ 
+</html>

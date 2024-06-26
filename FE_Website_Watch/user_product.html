@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!--=============== SWIPER CSS ===============--> 
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/user.css">  
+    <link rel="stylesheet" href="assets/css/manager.css">
+    <link rel="stylesheet" href="assets/css/toast.css">
+    <title>User</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="home.html" class="nav__logo">
+                <i class='bx bxl-medium-old'></i>TS-WATCH
+            </a>
+    
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Featured</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">New</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="user_product.html" class="nav__link">Product</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+    
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <form action="" id="search-bar" class="search">
+                    <input type="search" placeholder="Type something..." class="search__input">
+                    <a href="#"><i class='bx bx-search' ></i></a>
+                </form>
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+                <div class="nav__shop" id="cart-shop">
+                    <i class='bx bx-shopping-bag' ></i>
+                </div>
+    
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt' ></i>
+                </div>
+                
+                <div class="nav__user" id="info-user">
+                    <a href="user_info.html"><i class='bx bx-user'></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!--==================== CART ====================-->
+
+<div class="cart" id="cart">
+    <i class='bx bx-x cart__close' id="cart-close"></i>
+
+    <h2 class="cart__title-center">My Cart</h2>
+
+    <div class="cart__container">
+        <article class="cart__card"> 
+            <input type="checkbox" class="checkbox" name="band" value="sp1"/>
+            <div class="cart__box">
+                
+                <img src="assets/img/featured3.png" alt="" class="cart__img">
+            </div>
+
+            <div class="cart__details">
+                <h3 class="cart__title">Rose Gold</h3>
+                <span class="cart__price">$850</span>
+
+                <div class="cart__amount">
+                    <div class="cart__amount-content">
+                        <span class="cart__amount-box minus">
+                            <i class='bx bx-minus ' ></i>
+                        </span>
+
+                        <input class="cart__amount-number" value="1"/>
+
+                        <span class="cart__amount-box plus">
+                            <i class='bx bx-plus ' ></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+        </article>
+        
+        <article class="cart__card"> 
+            <input type="checkbox" class="checkbox" name="band" value="sp1"/>
+            <div class="cart__box">
+                
+                <img src="assets/img/featured3.png" alt="" class="cart__img">
+            </div>
+
+            <div class="cart__details">
+                <h3 class="cart__title">Rose Gold</h3>
+                <span class="cart__price">$850</span>
+
+                <div class="cart__amount">
+                    <div class="cart__amount-content">
+                        <span class="cart__amount-box minus">
+                            <i class='bx bx-minus ' ></i>
+                        </span>
+
+                        <input class="cart__amount-number" value="1"/>
+
+                        <span class="cart__amount-box plus">
+                            <i class='bx bx-plus ' ></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+        </article>
+
+        
+    </div>
+
+    <div class="cart__prices">
+        <span class="cart__prices-item">0 items</span>
+        <span class="cart__prices-total">$0</span>
+    </div>
+    <a href="user_thanhtoan.html" class="button home__button buy">BUY NOW</a>
+</div>
+</div>
+ 
+<main class="main">
+    <section class="section content">
+    
+        <nav id="sidebar-product">
+            <div class="content-fillter">
+            <span>Brands</span>
+            <ul id = "list_bands">
+                <li>
+                    <div>
+                        <input type="checkbox" id="brand1" name="band" value="ap" class="ckb_fillter">
+                        <label for="brand1"> Apple</label><br>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <input type="checkbox" id="band2" name="casio" value="ca" class="ckb_fillter">
+                        <label for="band2"> Casio</label><br>
+                    </div>            
+                </li>
+                <li>
+                    <div>
+                        <input type="checkbox" name="band3" value="ss" id="band3" class="ckb_fillter">
+                        <label for="band3">Samsung</label><br>
+                    </div>            
+                </li>
+                <li>
+                    <div>
+                        <input type="checkbox" id="band4" name="oppo" value="op" class="ckb_fillter">
+                        <label for="band4">Oppo</label><br>
+                    </div>            
+                </li>
+            </ul>
+            <span>Categorys</span>
+            <ul id="list_categorys">
+                <li>
+                    <div>
+                        <input type="checkbox" id="Category1" name="Category1" value="dhdt" class="ckb_fillter">
+                        <label for="Category1">Đồng hồ điện tử</label><br>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <input type="checkbox" name="Catagory2" value="dhc" id="Category2" class="ckb_fillter">
+                        <label for="Category2">Đồng hồ cơ</label><br>
+                    </div>            
+                </li>
+                <li>
+                    <div>
+                        <input type="checkbox" id="Category3" name="Catagory3" value="dhtm" class="ckb_fillter">
+                        <label for="Category3">Đồng hồ thông minh</label><br>
+                    </div>            
+                </li>
+            </ul>
+            <button class="button fillter"><i class="lni lni-funnel"></i> Lọc</button>
+            </div>
+        </nav>
+        <section class="productList">
+            <!-- Toast -->
+            <ul class="notifications"></ul>
+            <!-- End Toast -->
+            <div class="products__container grid">
+                <article class="products__card">
+                    <a href="user_product-detail.html">
+                        <img src="assets/img/product1.png" alt="" class="products__img">
+                    <h3 class="products__title">Spirit rose</h3>
+                    <span class="products__price dicount-price">950.000 VND</span>
+                    <span class="products__price none-dicount">1.500.000 VND</span>
+                    </a>
+                    <button class="products__button">   
+                        <i class='bx bx-shopping-bag'></i>
+                    </button>
+                </article>
+                <article class="products__card">
+                    <a href="user_product-detail.html">
+                        <img src="assets/img/product1.png" alt="" class="products__img">
+                    <h3 class="products__title">Spirit rose</h3>
+                    <span class="products__price dicount-price">950.000 VND</span>
+                    <span class="products__price none-dicount">1.500.000 VND</span>
+                    </a>
+                    <button class="products__button">   
+                        <i class='bx bx-shopping-bag'></i>
+                    </button>
+                </article>
+
+            </div>
+            
+        </section>
+        
+    </section>
+    <div aria-label="Page navigation" id="nav__page">
+        <ul class="pagination" id="pagination">
+            <li class="page-item first disabled"><a href="#First" class="page-link">First</a></li>
+            <li class="page-item prev disabled"><a href="#Previous" class="page-link">Previous</a></li>
+            <li class="page-item active"><a href="#1" class="page-link">1</a></li>
+            <li class="page-item"><a href="#2" class="page-link">2</a></li>
+            <li class="page-item"><a href="#3" class="page-link">3</a></li>
+            <li class="page-item next"><a href="#Next" class="page-link">Next</a></li>
+            <li class="page-item last"><a href="#Last" class="page-link">Last</a></li>
+        </ul>
+    </div>      
+</main> 
+
+    <footer class="footer section" style="margin-top: 20px;">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Our information</h3>
+
+                <ul class="footer__list">
+                    <li>1234 - Peru</li>
+                    <li>La Libertad 43210</li>
+                    <li>123-456-789</li>
+                </ul>
+                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.521284811536!2d106.78434277394591!3d10.84789975787353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175272a49301c55%3A0xde097a8add7a6926!2zOTcgxJAuIE1hbiBUaGnhu4duLCBIaeG7h3AgUGjDuiwgUXXhuq1uIDksIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1682523151551!5m2!1svi!2s" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">About Us</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Support Center</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Customer Support</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Copy Right</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Product</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Road bikes</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Mountain bikes</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Electric</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Accesories</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social</h3>
+
+                <ul class="footer__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+
+                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <span class="footer__copy">&#169; Bedimcode. All rigths reserved</span>
+    </footer>
+    
+<a href="#" class="scrollup" id="scroll-up"> 
+    <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+</a>
+
+<!--=============== SWIPER JS ===============-->
+<script src="assets/js/swiper-bundle.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/user_script.js"></script>
+<script src="assets/js/toast.js"></script>
+
+</body>
+</html>
